@@ -1,4 +1,4 @@
-name: Reusable deploy workflow
+name: Workflow dispatch with user input
 on:
   workflow_dispatch:
     inputs:
