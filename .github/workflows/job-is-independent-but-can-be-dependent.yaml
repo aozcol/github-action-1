@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "second-job task"
 
-  last job:
+  last-job:
      runs-on: ubuntu-latest
      needs: [first-job, second-job]
      steps:
