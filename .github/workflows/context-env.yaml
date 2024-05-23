@@ -1,0 +1,28 @@
+name: Using Context
+
+#on: push
+on: workflow_dispatch
+
+env:
+  FROM: GLOBAL env
+
+jobs:
+  prod-check:
+    runs-on: ubuntu-latest
+    env:
+      FROM: JOB env
+    steps:
+      - name: Global env 1
+        run: echo $FROM
+      - name: Job env
+        run: echo $FROM
+      - name: step env
+        run: echo $FROM
+        env:
+          FROM: STEP env
+
+  global-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Global env 2
+        run: echo $FROM
