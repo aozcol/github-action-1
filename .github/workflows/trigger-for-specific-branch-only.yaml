@@ -1,31 +1,36 @@
-name: Pull Request trigger
+name: Trigger when dev push
+
 on:
-  pull_request:
-    types:
-      - opened
+  push:
+    branches:
+      - dev
 
 jobs:
-  unit-test:
+  DAST:
     runs-on: ubuntu-latest
     steps:
-      - name: Run unit test
+      - name: Run DAST
         run: |
-          echo "running 10% of unit test complete"
+          echo "Running Katana for analysis"
+          echo "progress.....10%"
           sleep 1
-          echo "running 20% of unit test complete"
+          echo "progress.....20%"
           sleep 1
-          echo "running 30% of unit test complete"
+          echo "progress.....30%"
           sleep 1
-          echo "running 40% of unit test complete"
+          echo "progress.....40%"
           sleep 1
-          echo "running 50% of unit test complete"
+          echo "progress.....50%"
           sleep 1
-          echo "running 60% of unit test complete"
+          echo "progress.....60%"
           sleep 1
-          echo "running 70% of unit test complete"
+          echo "progress.....70%"
           sleep 1
-          echo "running 80% of unit test complete"
+          echo "progress.....80%"
           sleep 1
-          echo "running 90% of unit test complete"
+          echo "progress.....90%"
           sleep 1
-          echo "running 100% of unit test complete"
+          echo "progress.....100%"
+          sleep 1
+          echo "Completed."
+  
