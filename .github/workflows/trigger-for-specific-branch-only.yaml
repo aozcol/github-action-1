@@ -1,9 +1,6 @@
 name: Trigger when dev push
 
 on:
-  label:
-    types:
-      - created
   push:
     branches:
       - dev
