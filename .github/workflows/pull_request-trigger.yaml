@@ -1,0 +1,31 @@
+name: Pull Request trigger
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run unit test
+        run: |
+          echo "running 10% of unit test complete"
+          sleep 1
+          echo "running 20% of unit test complete"
+          sleep 1
+          echo "running 30% of unit test complete"
+          sleep 1
+          echo "running 40% of unit test complete"
+          sleep 1
+          echo "running 50% of unit test complete"
+          sleep 1
+          echo "running 60% of unit test complete"
+          sleep 1
+          echo "running 70% of unit test complete"
+          sleep 1
+          echo "running 80% of unit test complete"
+          sleep 1
+          echo "running 90% of unit test complete"
+          sleep 1
+          echo "running 100% of unit test complete"
