@@ -10,3 +10,5 @@ jobs:
     steps:
       - name: Calling variable from environment dev
         run: echo ${{ vars.FROM_ENV_VAR }}
+      - name: Calling secret from environment dev
+        run: echo ${{ secrets.FROM_SECRET_VAR }}
