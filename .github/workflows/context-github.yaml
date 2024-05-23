@@ -1,4 +1,4 @@
-name: Using Context
+name: Using Context GitHub
 
 #on: push
 on: workflow_dispatch
