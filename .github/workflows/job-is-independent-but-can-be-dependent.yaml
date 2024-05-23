@@ -1,0 +1,27 @@
+name: Job is Independent but can be Dependent
+
+on:
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: running first-job task
+        run: |
+          echo "first-job task"
+
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: running second-job task
+        run: |
+          echo "second-job task"
+
+  last job:
+     runs-on: ubuntu-latest
+     needs: [first-job, second-job]
+     steps:
+       - name: running last-job task
+         run: |
+           echo "last-job task"
