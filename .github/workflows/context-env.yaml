@@ -24,7 +24,7 @@ jobs:
   global-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Global env 2
+      - name: Global env 2 - using $VAR
         run: echo $FROM
-      - name: Global env 2
+      - name: Global env 2 - using env.VAR
         run: echo ${{ env.FROM }}
