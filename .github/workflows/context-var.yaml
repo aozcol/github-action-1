@@ -9,4 +9,4 @@ jobs:
     environment: dev
     steps:
       - name: Calling variable from environment dev
-        run: echo ${{ var.FROM_ENV_VAR }}
+        run: echo ${{ vars.FROM_ENV_VAR }}
