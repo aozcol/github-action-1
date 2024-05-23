@@ -2,7 +2,7 @@ name: Workflow dispatch with user input
 on:
   workflow_dispatch:
     inputs:
-      build_id:
+      tag_release:
         required: true
         type: number
       deploy_target:
