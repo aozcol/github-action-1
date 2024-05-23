@@ -1,0 +1,36 @@
+name: Trigger when dev push
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  DAST:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run DAST
+        run: |
+          echo "Running Katana for analysis"
+          echo "progress.....10%"
+          sleep 1
+          echo "progress.....20%"
+          sleep 1
+          echo "progress.....30%"
+          sleep 1
+          echo "progress.....40%"
+          sleep 1
+          echo "progress.....50%"
+          sleep 1
+          echo "progress.....60%"
+          sleep 1
+          echo "progress.....70%"
+          sleep 1
+          echo "progress.....80%"
+          sleep 1
+          echo "progress.....90%"
+          sleep 1
+          echo "progress.....100%"
+          sleep 1
+          echo "Completed."
+  
