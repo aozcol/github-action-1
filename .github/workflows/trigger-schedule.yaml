@@ -2,8 +2,8 @@ name: Cron
 
 on:
   schedule:
-    - cron: "0 16 * * *" 
-    - cron: "*/2 * * * *"
+    # - cron: "0 16 * * *" 
+    - cron: "*/5 * * * *"
 
 jobs:
   example-job:
