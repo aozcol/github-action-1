@@ -1,0 +1,14 @@
+name: workflow_run B
+
+on:
+  workflow_run:
+    workflows: ["workflow_run A"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo
+      run: echo FROM WORKFLOW B
