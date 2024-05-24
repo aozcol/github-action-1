@@ -1,0 +1,18 @@
+name: approval
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run tests
+      run: echo test
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+    - name: Deploy to production
+      run: echo deploy
