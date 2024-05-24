@@ -1,0 +1,13 @@
+name: Cron
+
+on:
+  schedule:
+    - cron: "0 16 * * *" 
+    - cron: "*/2 * * * *"
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run at 12 AM every GMT+8 & every 2 minutes.
+      run: echo "This job runs every Monday at 9 AM UTC+8"
